@@ -16,7 +16,6 @@ function App() {
     const imcResult = (weightFloat/(heightFloat * heightFloat)).toFixed(1)
 
     console.log("IMC calculado:", imcResult)
-
     setImc(imcResult)
   }
   const [imc,setImc] = useState("")
@@ -25,7 +24,7 @@ function App() {
 
   return (
     <div className="container">
-      {!imc ? <ImcCalc calcImc={calcImc}/> : <ImcTable /> }
+      {!imc ? <ImcCalc calcImc={calcImc}/> : <ImcTable data={data} /> }
       </div>
   )
 }
