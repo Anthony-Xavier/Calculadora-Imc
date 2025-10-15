@@ -2,15 +2,15 @@ import React from 'react'
 import { Button } from './Button'
 import './ImcTable.css'
 
-const ImcTable = ({data}) => {
+const ImcTable = ({data, imc, info, infoClass}) => {
   return (
     <div id="result-container">
       <p id="imc-number">
-        Seu imc:
+        Seu imc: <span className={infoClass}>{imc}</span>
       </p>
 
       <p id="imc-info">
-        Situação atual: 
+        Situação atual: <span className={infoClass}>{info}</span>
       </p>
       
       <h3>Confira as Classificações</h3>
